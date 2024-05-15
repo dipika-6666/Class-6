@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The F-spot - Home</title>
+    <link rel="stylesheet" href="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Three Line Menu Bar -->
+        <span class="menu-bar" onclick="toggleMenu()">&#9776;</span>
+        <!-- Title -->
+        <h1 class="title">The F-Spot</h1>
+        <!-- Icons (Home, Favorites, Shopping Cart) -->
+        <span class="icons">
+            <a href="index.html" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\Screenshot 2024-05-14 210024.png"></a>
+            <a href="#" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\ff.png"></a>
+            <a href="#" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\images.png"></a>
+        </span>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Slider Section -->
+        <section class="slider">
+            <span class="slide">
+                <h2>Quote 1</h2>
+                <img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\depositphotos_339361514-stock-photo-set-with-fashionable-womens-clothing.jpg">
+                <p>"Believe you can and you're halfway there." - Theodore Roosevelt"</p>
+            </span>
+            <span class="slide">
+                <h2>Quote 2</h2>
+                <img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\Best-Sites-for-Womenswear-15-Gap-1.png">
+                <p>"The only way to do great work is to love what you do." - Steve Jobs"</p>
+            </span>
+            <span class="slide">
+                <h2>Quote 3</h2>
+                <img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\2330-FF-Carousel-734x380.jpeg">
+                <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill"</p>
+            </span>
+            <span class="slide">
+                <h2>Quote 4</h2>
+                <img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\women1_wide-94268c08669e164170967943bf239fbef1f28ea9.jpg">
+                <p>"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt"</p>
+            </span>
+            
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <h2>Reviews</h2>
+            <span class="review">
+                <p>Bought this dress for my wife as our anniversary gift and she liked it a lot.</p>
+                <p>- John Doe</p>
+            </span><span class="review">
+                <p> Amazing dress with amazing fabric quality. Totally loved it!</p>
+                <p>- Martha Stuart</p>
+            </span><span class="review">
+                <p>"That amazing dress! It's true to fit as per my size. Absolutely love it!"</p>
+                <p>- Jullie Patrick</p>
+            </span>
+            <!-- Add more reviews here if needed -->
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form action="#" method="post">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 The F-spot. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for slider -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

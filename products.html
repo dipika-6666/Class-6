@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The F-spot</title>
+    <link rel="stylesheet" href="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\style.css">
+    <style>
+        /* Additional CSS for the slider */
+        .slider {
+            margin-top: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Three Line Menu Bar -->
+        <span class="menu-bar" onclick="toggleMenu()">&#9776;</span>
+        <!-- Title -->
+        <h1 class="title">The F-Spot</h1>
+        <!-- Icons (Home, Favorites, Shopping Cart) -->
+        <span class="icons">
+            <a href="#" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\Screenshot 2024-05-14 210024.png"></a>
+            <a href="#" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\ff.png"></a>
+            <a href="#" class="icon"><img src="C:\Users\Deepika\OneDrive\Desktop\Fashion hub\images.png"></a>
+        </span>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Product Feature Section -->
+        <section class="product-feature">
+            <figure class="product-image">
+                <img src="ellie-delphine-wears-white-and-green-squared-sunglasses-news-photo-1690921115.jpg" alt="White Top">
+            </figure>
+            <span class="product-details">
+                <h2>Trending White</h2>
+                <p>Price: $59.99</p>
+                <p>Description:</p>
+                <ul>
+                    <li>Fit: Slim Fit</li>
+                    <li>Style: Casual</li>
+                    <li>Fabric: Cotton</li>
+                </ul>
+                <p>Rating: <span class="rating">4.5</span></p>
+            </span>
+        </section>
+
+        <!-- New Launches Section -->
+        <section class="new-launches">
+            <span class="product">
+                <figure>
+                    <img src="il_794xN.4345367996_oiy7.webp" alt="Product Image">
+                </figure>
+                <p>Price: $39.99</p>
+                <p>Rating: <span class="rating">4.3</span></p>
+            </span>
+            <span class="product">
+                <figure>
+                    <img src="il_794xN.4367786501_m7em.webp" alt="Product Image">
+                </figure>
+                <p>Price: $41.50</p>
+                <p>Rating: <span class="rating">4.7</span></p>
+            </span>
+            <span class="product">
+                <figure>
+                    <img src="il_794xN.5055252481_fiuq.webp" alt="Product Image">
+                </figure>
+                <p>Price: $15.50</p>
+                <p>Rating: <span class="rating">4.8</span></p>
+            </span>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 The F-spot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
