@@ -51,3 +51,11 @@ function calculateAge(dob) {
     }
     return age;
 }
+
+// Function to scroll to the form section
+function scrollToForm() {
+    var formSection = document.getElementById("registration");
+    formSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
