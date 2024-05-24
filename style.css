@@ -137,82 +137,44 @@ footer {
 }
 
 /* Additional Styles for New Page */
-.slider {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 50px;
-}
-.slide {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 50px;
-}
-/* Reviews Section Styles */
-.reviews {
+.slider,
+.slide,
+.reviews,
+.newsletter,
+.registration-form {
     text-align: center;
     font-size: 20px;
     margin-top: 50px;
 }
 
-.review {
-    margin-bottom: 20px;
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Newsletter Section Styles */
-.newsletter {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 50px;
+.registration-form label {
+    margin-bottom: 10px;
 }
 
-.newsletter form {
-    margin-top: 20px;
-}
-
-.newsletter input[type="email"] {
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="date"] {
     padding: 10px;
-    width: 250px;
-    margin-right: 10px;
+    width: 300px;
+    margin-bottom: 10px;
 }
 
-.newsletter button {
+.registration-form button {
     padding: 10px 20px;
     background-color: #c71585;
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.newsletter button:hover {
-    background-color: #a20c6d;
-}
-
-/* Form Section Styles */
-.discount-form {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 50px;
-}
-
-.discount-form form {
-    margin-top: 20px;
-}
-
-.discount-form input[type="number"] {
-    padding: 10px;
-    width: 250px;
-    margin-right: 10px;
-}
-
-.discount-form button {
-    padding: 10px 20px;
-    background-color: #c71585;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.discount-form button:hover {
+.registration-form button:hover {
     background-color: #a20c6d;
 }
 
