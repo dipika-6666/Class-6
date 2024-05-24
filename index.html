@@ -15,7 +15,7 @@
         <h1 class="title">The F-Spot</h1>
         <!-- Icons (Home, Favorites, Shopping Cart) -->
         <span class="icons">
-            <a href="index.html" class="icon"><img src="Screenshot_2024-05-14_210024.png" alt ="Home"></a>
+            <a href="index.html" class="icon"><img src="Screenshot_2024-05-14_210024.png"  alt ="Home"></a>
             <a href="#" class="icon"><img src="ff.png" alt ="favorites"></a>
             <a href="#" class="icon"><img src="images.png" alt="Cart"></a>
         </span>
@@ -49,7 +49,7 @@
                 "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill
             </span>
             <span class="slide">
-               <img src="women1_wide-94268c08669e164170967943bf239fbef1f28ea9.jpg" alt ="slide 4"><br>
+                <img src="women1_wide-94268c08669e164170967943bf239fbef1f28ea9.jpg" alt ="slide 4"><br>
                 "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
             </span>
             
@@ -63,10 +63,10 @@
                 - John Doe
             </span><span class="review">
                 "Amazing dress with amazing fabric quality. Totally loved it!"
-                - Martha Stuart
+                - Martha Stewart
             </span><span class="review">
                 "That amazing dress! It's true to fit as per my size. Absolutely love it!"
-                - Jullie Patrick
+                - Julie Patrick
             </span>
             <!-- Add more reviews here if needed -->
         </section>
@@ -74,42 +74,33 @@
         <!-- Newsletter Section -->
         <section class="newsletter">
             <h2>Subscribe to Our Newsletter</h2>
-            <form id="newsletterForm" onsubmit="return submitForm()">
+            <form id="newsletter-form">
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" name="email" required>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
-
-        <!-- Registration Form -->
+        
+        <!-- Registration Section -->
         <section class="registration">
-            <h2>Registration</h2>
-            <form id="registrationForm" onsubmit="return submitRegistration()">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required><br>
-
-                <label for="emailReg">Email:</label>
-                <input type="email" id="emailReg" name="emailReg" required><br>
-
-                <label for="dob">Date of Birth:</label>
-                <select id="dob" name="dob">
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <input type="number" id="year" name="year" min="1900" max="2024" placeholder="Year"><br>
-
+            <h2>Register Here</h2>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br>
+                <label for="calculation">Enter 5 + 7:</label>
+                <input type="number" id="calculation" name="calculation" required><br>
                 <button type="submit">Register</button>
             </form>
+        </section>
+        
+        <!-- Dynamic Information Display -->
+        <section class="dynamic-info">
+            <h2>Dynamic Information</h2>
+            <p>Name: <span id="display-name"></span></p>
+            <p>Age: <span id="display-age"></span></p>
+            <p>Calculation Result: <span id="display-calculation"></span></p>
         </section>
     </main>
 
@@ -119,23 +110,7 @@
     </footer>
 
     <!-- JavaScript for slider -->
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("slide");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
-        }
-    </script>
-    
+    <script src="script.js"></script>
     <script>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -145,18 +120,6 @@
                 menu.style.display = "block";
             }
         }
-
-        function submitForm() {
-            var email = document.getElementById("email").value;
-            alert("Thank you for subscribing with email: " + email);
-            return false; // Prevent form submission
-        }
-
-        function submitRegistration() {
-            var fullName = document.getElementById("fullName").value;
-            var emailReg = document.getElementById("emailReg").value;
-            var dobMonth = document.getElementById("dob").value;
-            var dobYear = document.getElementById("year").value;
-            var age = new Date().getFullYear() - dobYear;
-
-            alert("Registration Successful!\nName: " + fullName + "\nEmail: " + emailReg + "\nDate of Birth: " + dobMonth + " " + dobYear + "\nAge
+    </script>
+</body>
+</html>
