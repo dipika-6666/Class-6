@@ -9,6 +9,9 @@
 <body>
     <!-- Header Section -->
     <header>
+        <!-- Registration Button -->
+        <button class="registration-btn" onclick="scrollToForm()">Register</button>
+        
         <!-- Three Line Menu Bar -->
         <span class="menu-bar" onclick="toggleMenu()">&#9776;</span>
         <!-- Title -->
@@ -30,7 +33,6 @@
             <li><a href="#">About Us</a></li>
         </ul>
     </nav>
-
     <!-- Main Content Area -->
     <main>
         <!-- Slider Section -->
@@ -97,21 +99,12 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
+  <footer>
         <p>&copy; 2024 The F-spot. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for slider -->
+    <!-- JavaScript for smooth scrolling and toggling menu -->
     <script src="script.js"></script>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("nav-menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
+
 </body>
 </html>
