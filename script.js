@@ -1,4 +1,4 @@
-// Function to toggle navigation menu
+// Function to toggle the navigation menu
 function toggleMenu() {
     var menu = document.getElementById("nav-menu");
     if (menu.style.display === "block") {
@@ -8,42 +8,46 @@ function toggleMenu() {
     }
 }
 
-// Function to handle form submission in index.html
+// Function to handle the slider
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+
+// Function to handle form submission
 function submitForm(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); // Prevent default form submission behavior
+    var form = event.target;
+    var formData = new FormData(form);
+    var fullName = formData.get('fullName');
+    var email = formData.get('email');
+    var dob = formData.get('dob');
+    var dobDate = new Date(dob);
+    var age = calculateAge(dobDate);
+    var message = `Thank you, ${fullName}! Your registration is successful.\nEmail: ${email}\nDate of Birth: ${dob}\nAge: ${age}`;
+    alert(message);
+    form.reset(); // Reset the form after submission
+}
 
-    // Fetching form inputs
-    var fullName = document.getElementById("fullName").value;
-    var email = document.getElementById("email").value;
-    var dob = document.getElementById("dob").value;
-
-    // Calculating age
+// Function to calculate age from date of birth
+function calculateAge(dob) {
     var today = new Date();
-    var birthDate = new Date(dob);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var monthDiff = today.getMonth() - birthDate.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    var age = today.getFullYear() - dob.getFullYear();
+    var monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
         age--;
     }
-
-    // Displaying information in a pop-up
-    var message = `Name: ${fullName}\nEmail: ${email}\nDate of Birth: ${dob}\nAge: ${age}`;
-    alert(message);
+    return age;
 }
-
-// Function to add interactivity to product listing in products.html
-function setupProductListing() {
-    var products = document.querySelectorAll(".product");
-
-    products.forEach(function(product) {
-        product.addEventListener("click", function() {
-            var productName = product.querySelector("h3").textContent;
-            var price = product.querySelector("p:nth-of-type(1)").textContent;
-            var discount = product.querySelector("p:nth-of-type(2)").textContent;
-            alert(`You selected ${productName}. Price: ${price}. Discount: ${discount}`);
-        });
-    });
-}
-
-// Execute setupProductListing function when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", setupProductListing);
