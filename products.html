@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The F-spot - Products</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for the slider */
+        .slider {
+            margin-top: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -25,17 +37,16 @@
     <nav id="nav-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#checkout">Checkout</a></li>
-            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#products" onclick="scrollToSection('#products')">Products</a></li>
+            <li><a href="#checkout" onclick="scrollToSection('#checkout')">Checkout</a></li>
+            <li><a href="#about-us" onclick="scrollToSection('#about-us')">About Us</a></li>
         </ul>
     </nav>
 
     <!-- Main Content Area -->
-  <!-- Main Content Area -->
     <main>
         <!-- Product Feature Section -->
-        <section class="product-feature">
+        <section id="products" class="product-feature">
             <figure class="product-image">
                 <img src="ellie-delphine-wears-white-and-green-squared-sunglasses-news-photo-1690921115.jpg" alt="White Top">
             </figure>
@@ -53,7 +64,7 @@
         </section>
 
         <!-- New Launches Section -->
-        <section class="new-launches">
+        <section id="checkout" class="new-launches">
             <span class="product">
                 <figure>
                     <img src="il_794xN.4345367996_oiy7.webp" alt="Product Image">
@@ -85,5 +96,25 @@
 
     <!-- Include the JavaScript file -->
     <script src="script.js"></script>
+
+    <script>
+        // Function to toggle navigation menu
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        // Function to scroll to a section smoothly
+        function scrollToSection(sectionId) {
+            var section = document.querySelector(sectionId);
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
