@@ -59,3 +59,19 @@ function scrollToForm() {
         behavior: 'smooth'
     });
 }
+function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        // Function to scroll to a section smoothly
+        function scrollToSection(sectionId) {
+            var section = document.querySelector(sectionId);
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
