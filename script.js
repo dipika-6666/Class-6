@@ -1,3 +1,4 @@
+// Function to toggle navigation menu
 function toggleMenu() {
     var menu = document.getElementById("nav-menu");
     if (menu.style.display === "block") {
@@ -7,6 +8,7 @@ function toggleMenu() {
     }
 }
 
+// Function to handle form submission in index.html
 function submitForm(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -28,3 +30,20 @@ function submitForm(event) {
     var message = `Name: ${fullName}\nEmail: ${email}\nDate of Birth: ${dob}\nAge: ${age}`;
     alert(message);
 }
+
+// Function to add interactivity to product listing in products.html
+function setupProductListing() {
+    var products = document.querySelectorAll(".product");
+
+    products.forEach(function(product) {
+        product.addEventListener("click", function() {
+            var productName = product.querySelector("h3").textContent;
+            var price = product.querySelector("p:nth-of-type(1)").textContent;
+            var discount = product.querySelector("p:nth-of-type(2)").textContent;
+            alert(`You selected ${productName}. Price: ${price}. Discount: ${discount}`);
+        });
+    });
+}
+
+// Execute setupProductListing function when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", setupProductListing);
