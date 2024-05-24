@@ -3,20 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The F-spot - Home</title>
+    <title>The F-spot - Products</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional CSS for the slider */
-        .slider {
-            margin-top: 20px;
-            overflow: hidden;
-            text-align: center;
-        }
-        .slide {
-            display: none;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -27,8 +15,8 @@
         <h1 class="title">The F-Spot</h1>
         <!-- Icons (Home, Favorites, Shopping Cart) -->
         <span class="icons">
-            <a href="index.html" class="icon"><img src="Screenshot_2024-05-14_210024.png" alt ="Home"></a>
-            <a href="#" class="icon"><img src="ff.png" alt ="favorites"></a>
+            <a href="index.html" class="icon"><img src="Screenshot_2024-05-14_210024.png" alt="Home"></a>
+            <a href="#" class="icon"><img src="ff.png" alt="Favorites"></a>
             <a href="#" class="icon"><img src="images.png" alt="Cart"></a>
         </span>
     </header>
@@ -36,7 +24,7 @@
     <!-- Navigation Menu -->
     <nav id="nav-menu">
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#checkout">Checkout</a></li>
             <li><a href="#about-us">About Us</a></li>
@@ -44,102 +32,29 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main id="home">
-        <!-- Slider Section -->
-        <section class="slider">
-            <h2>Feautring Products</h2>
-            <span class="slide">
-                <img src="depositphotos_339361514-stock-photo-set-with-fashionable-womens-clothing.jpg" alt ="slide 1"><br>
-                "Believe you can and you're halfway there." - Theodore Roosevelt
-            </span>
-            <span class="slide">
-                <img src="Best-Sites-for-Womenswear-15-Gap-1.png" alt ="slide 2"><br>
-                "The only way to do great work is to love what you do." - Steve Jobs
-            </span>
-            <span class="slide">
-                <img src="2330-FF-Carousel-734x380.jpeg" alt ="slide 3"><br>
-                "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill
-            </span>
-            <span class="slide">
-               <img src="women1_wide-94268c08669e164170967943bf239fbef1f28ea9.jpg" alt ="slide 4"><br>
-                "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
-            </span>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="reviews">
-            <h2>Reviews</h2>
-            <span class="review">
-                "Bought this dress for my wife as our anniversary gift and she liked it a lot."
-                - John Doe
-            </span><span class="review">
-                "Amazing dress with amazing fabric quality. Totally loved it!"
-                - Martha Stuart
-            </span><span class="review">
-                "That amazing dress! It's true to fit as per my size. Absolutely love it!"
-                - Jullie Patrick
-            </span>
-            <!-- Add more reviews here if needed -->
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-            <form action="#" method="post">
-                <label for="email">Enter your email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-
-        <!-- Form Section -->
-        <section class="user-form">
-            <h2>Calculate Your Yearly Wage</h2>
-            <form id="wageForm">
-                <label for="hourlyWage">Hourly Wage ($):</label>
-                <input type="number" id="hourlyWage" name="hourlyWage" required>
-
-                <label for="hoursPerWeek">Hours per Week:</label>
-                <input type="number" id="hoursPerWeek" name="hoursPerWeek" required>
-
-                <label for="joinDate">Joining Date:</label>
-                <select id="joinDay" name="joinDay" required>
-                    <option value="">Day</option>
-                    <script>
-                        for (let i = 1; i <= 31; i++) {
-                            document.write('<option value="' + i + '">' + i + '</option>');
-                        }
-                    </script>
-                </select>
-                <select id="joinMonth" name="joinMonth" required>
-                    <option value="">Month</option>
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
-                <select id="joinYear" name="joinYear" required>
-                    <option value="">Year</option>
-                    <script>
-                        const currentYear = new Date().getFullYear();
-                        for (let i = currentYear; i >= 1900; i--) {
-                            document.write('<option value="' + i + '">' + i + '</option>');
-                        }
-                    </script>
-                </select>
-
-                <button type="submit">Calculate</button>
-            </form>
-
-            <div id="result"></div>
+    <main id="products">
+        <!-- Product Listing Section -->
+        <section class="product-listing">
+            <h2>Our Products</h2>
+            <!-- Product Items -->
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: $50</p>
+                <p>Discount: 10%</p>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Price: $70</p>
+                <p>Discount: 15%</p>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Price: $30</p>
+                <p>Discount: 5%</p>
+            </div>
         </section>
     </main>
 
@@ -148,76 +63,7 @@
         <p>&copy; 2024 The F-spot. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for slider -->
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("slide");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
-        }
-    </script>
-    
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("nav-menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
-
-    <script>
-        document.getElementById('wageForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Get input values
-            const hourlyWage = parseFloat(document.getElementById('hourlyWage').value);
-            const hoursPerWeek = parseFloat(document.getElementById('hoursPerWeek').value);
-            const joinDay = document.getElementById('joinDay').value;
-            const joinMonth = document.getElementById('joinMonth').value;
-            const joinYear = document.getElementById('joinYear').value;
-
-            // Validate inputs
-            if (isNaN(hourlyWage) || isNaN(hoursPerWeek)) {
-                alert('Please enter valid numbers for wage and hours.');
-                return;
-            }
-
-            // Calculate yearly wage
-            const yearlyWage = hourlyWage * hoursPerWeek * 52;
-
-            // Display result
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `
-                <h3>Calculation Result</h3>
-                <p>Hourly Wage: $${hourlyWage.toFixed(2)}</p>
-                <p>Hours per Week: ${hoursPerWeek}</p>
-                <p>Yearly Wage: $${yearlyWage.toFixed(2)}</p>
-                <p>Joining Date: ${joinDay} ${joinMonth}, ${joinYear}</p>
-            `;
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
