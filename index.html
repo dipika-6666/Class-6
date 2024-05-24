@@ -82,25 +82,17 @@
         </section>
         
         <!-- Registration Section -->
-        <section class="registration">
-            <h2>Register Here</h2>
-            <form id="registration-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required><br>
-                <label for="calculation">Enter 5 + 7:</label>
-                <input type="number" id="calculation" name="calculation" required><br>
-                <button type="submit">Register</button>
+        <section class="registration-form">
+            <h2>Register</h2>
+            <form id="registrationForm" onsubmit="submitForm(event)">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+                <button type="submit">Submit</button>
             </form>
-        </section>
-        
-        <!-- Dynamic Information Display -->
-        <section class="dynamic-info">
-            <h2>Dynamic Information</h2>
-            <p>Name: <span id="display-name"></span></p>
-            <p>Age: <span id="display-age"></span></p>
-            <p>Calculation Result: <span id="display-calculation"></span></p>
         </section>
     </main>
 
