@@ -54,7 +54,7 @@ function calculateAge(dob) {
 
 // Function to scroll to the form section
 function scrollToForm() {
-    var formSection = document.getElementById("registration");
+    var formSection = document.getElementById("registration-form");
     formSection.scrollIntoView({
         behavior: 'smooth'
     });
