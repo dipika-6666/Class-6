@@ -193,3 +193,9 @@ footer {
     width: 80%;
     z-index: 1000;
 }
+
+
+.error {
+    color: red;
+    display: none;
+}
