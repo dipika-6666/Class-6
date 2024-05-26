@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The F-Spot - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <span class="menu-bar" onclick="toggleMenu()">&#9776;</span>
+        <h1 class="title">The F-Spot</h1>
+        <span class="icons">
+            <a href="index.html" class="icon"><img src="home-icon.png" alt="Home"></a>
+            <a href="favorites.html" class="icon"><img src="favorites-icon.png" alt="Favorites"></a>
+            <a href="cart.html" class="icon"><img src="cart-icon.png" alt="Cart"></a>
+        </span>
+        <a href="index.html#registration" class="register-btn" onclick="scrollToForm()">Register</a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to The F-Spot! We are your one-stop destination for the latest fashion trends and high-quality apparel. Our mission is to provide stylish and affordable clothing options for everyone. Whether you're looking for a casual outfit or a formal dress, we have something for every occasion. Explore our collections and find your perfect style today!</p>
+            <img src="about-us.jpg" alt="About Us">
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 The F-Spot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
