@@ -33,11 +33,20 @@ function submitForm(event) {
     var formData = new FormData(form);
     var fullName = formData.get('fullName');
     var email = formData.get('email');
-    var number = formData.get('number');
+     var phoneNumber = document.getElementById('phoneNumber').value;
+    var phoneError = document.getElementById('phoneError');
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
+        phoneError.textContent = "Please enter a valid 10-digit phone number.";
+        phoneError.style.display = 'block';
+        event.preventDefault();
+    } else {
+        phoneError.style.display = 'none';
+    }
     var dob = formData.get('dob');
     var dobDate = new Date(dob);
     var age = calculateAge(dobDate);
-    var message = `Thank you, ${fullName}! Your registration is successful.\nEmail: ${email}\nPhone number: ${number}\nDate of Birth: ${dob}\nAge: ${age}`;
+    var message = `Thank you, ${fullName}! Your registration is successful.\nEmail: ${email}\nPhone number: ${phoneNumber}\nDate of Birth: ${dob}\nAge: ${age}`;
     alert(message);
     form.reset(); // Reset the form after submission
 }
