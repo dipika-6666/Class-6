@@ -33,10 +33,11 @@ function submitForm(event) {
     var formData = new FormData(form);
     var fullName = formData.get('fullName');
     var email = formData.get('email');
+    var number = formData.get('number');
     var dob = formData.get('dob');
     var dobDate = new Date(dob);
     var age = calculateAge(dobDate);
-    var message = `Thank you, ${fullName}! Your registration is successful.\nEmail: ${email}\nDate of Birth: ${dob}\nAge: ${age}`;
+    var message = `Thank you, ${fullName}! Your registration is successful.\nEmail: ${email}\nPhone number: ${number}\nDate of Birth: ${dob}\nAge: ${age}`;
     alert(message);
     form.reset(); // Reset the form after submission
 }
