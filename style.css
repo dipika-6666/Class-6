@@ -89,8 +89,47 @@ a {
 /* Main Content Styles */
 main {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     flex: 1;
+}
+
+/* Registration Form Styles */
+.registration-form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration-form label {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+}
+
+.registration-form input, .registration-form select {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5px;
+}
+
+.registration-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #a20c6d;
 }
 
 /* Product Listing Section Styles */
