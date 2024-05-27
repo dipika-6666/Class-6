@@ -244,3 +244,14 @@ footer {
     position: relative;
     bottom: 0;
 }
+
+/* Additional CSS for the slider */
+        .slider {
+            margin-top: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+        }
