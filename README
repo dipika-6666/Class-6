@@ -1,0 +1,53 @@
+The F-Spot is a responsive and user-friendly website designed to provide an exceptional online shopping experience. It features a variety of functionalities, including product listings, a registration form, a favorites section, and a cart with checkout capabilities. The website is built using HTML, CSS, and JavaScript, ensuring compatibility across multiple devices and browsers.
+
+Features
+Home Page: Introduction to the website with a slider showcasing featured products.
+Product Listings: Display of products with options to add to favorites and cart.
+Favorites: A section to view and manage favorite products.
+Cart: A detailed view of products added to the cart with a checkout form.
+Registration Form: User registration with validation.
+Responsive Design: Ensures compatibility across various devices and screen sizes.
+Project Structure
+bash
+Copy code
+Class-6/
+│
+├── index.html           # Home page
+├── products.html        # Products listing page
+├── favorites.html       # Favorites page
+├── cart.html            # Cart and checkout page
+├── about.html           # About Us page
+├── style.css            # Stylesheet for all pages
+├── script.js            # JavaScript file for all pages
+└── README.md            # This file
+
+How to Run the Project Locally
+
+Prerequisites
+A modern web browser (Chrome, Firefox, Safari, etc.)
+A text editor or IDE (e.g., VS Code, Sublime Text) for making any changes
+Basic knowledge of HTML, CSS, and JavaScript
+
+Steps to Run
+Clone the Repository
+
+Clone the repository to your local machine using the following command:
+
+sh
+
+Copy code
+git clone https://github.com/your-username/Class-6.git
+
+Or download the ZIP file from the repository and extract it to your preferred location.
+
+Navigate to the Project Directory
+
+Open the terminal (or command prompt) and navigate to the project directory:
+
+sh
+Copy code
+cd Class-6
+Open the index.html File
+
+Use your web browser to open the index.html file. You can do this by right-clicking the file and selecting "Open with" and then choosing your browser, or you can drag and drop the file into your browser window.
+
