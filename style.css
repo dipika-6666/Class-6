@@ -8,16 +8,24 @@
 /* Global Styles */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center; /* Center align text */
 }
 
 /* Header Styles */
 header {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
+    text-align: center;
 }
 
 .menu-bar {
@@ -58,6 +66,7 @@ header {
 
 /* Navigation Bar Styles */
 nav {
+    width: 100%;
     background-color: #c71585;
     padding: 10px 0;
 }
@@ -77,9 +86,15 @@ a {
     color: #fff;
 }
 
+/* Main Content Styles */
+main {
+    width: 100%;
+    max-width: 1200px;
+    flex: 1;
+}
+
 /* Product Listing Section Styles */
 .product-listing {
-    text-align: center;
     margin: 20px 0;
 }
 
@@ -111,7 +126,6 @@ a {
 /* Cart Section Styles */
 .cart-list {
     margin-top: 20px;
-    text-align: center;
 }
 
 .cart-list ul {
@@ -125,13 +139,13 @@ a {
 /* Checkout Section Styles */
 .checkout-section {
     margin-top: 20px;
-    text-align: center;
     display: none;
 }
 
 .checkout-section form {
     display: inline-block;
     text-align: left;
+    max-width: 300px;
 }
 
 .checkout-section label {
@@ -141,7 +155,7 @@ a {
 
 .checkout-section input {
     padding: 10px;
-    width: 250px;
+    width: 100%;
     margin-top: 5px;
 }
 
@@ -168,6 +182,9 @@ a {
     justify-content: center;
     align-items: center;
     color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .banner h2 {
@@ -177,11 +194,11 @@ a {
 
 /* Footer Styles */
 footer {
+    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
