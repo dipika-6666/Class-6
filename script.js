@@ -128,3 +128,67 @@ function toggleMenu() {
                 behavior: 'smooth'
             });
         }
+
+// Cart data structure
+var cart = [];
+
+// Function to toggle menu
+function toggleMenu() {
+    var menu = document.getElementById("nav-menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+// Function to add product to cart
+function addToCart(event) {
+    // Get the product details
+    var product = event.target.closest('.product');
+    var productName = product.querySelector('h3').textContent;
+    var productPrice = parseFloat(product.querySelector('.price').textContent.replace('$', ''));
+
+    // Add the product to the cart data structure
+    var cartItem = { name: productName, price: productPrice };
+    cart.push(cartItem);
+
+    // Update the cart display
+    updateCartDisplay();
+}
+
+// Function to update cart display
+function updateCartDisplay() {
+    var cartCount = document.getElementById('cartCount');
+    var cartList = document.getElementById('cartItems');
+
+    // Update cart count
+    cartCount.textContent = cart.length;
+
+    // Clear existing cart items
+    cartList.innerHTML = '';
+
+    // Populate cart items
+    cart.forEach(function(item) {
+        var li = document.createElement('li');
+        li.textContent = item.name + ' - $' + item.price.toFixed(2);
+        cartList.appendChild(li);
+    });
+
+    // Show or hide the cart icon based on cart items
+    if (cart.length > 0) {
+        document.getElementById('cartIcon').style.display = 'block';
+    } else {
+        document.getElementById('cartIcon').style.display = 'none';
+    }
+}
+
+// Function to toggle cart display
+function toggleCart() {
+    var cartList = document.getElementById('cartList');
+    if (cartList.style.display === 'block') {
+        cartList.style.display = 'none';
+    } else {
+        cartList.style.display = 'block';
+    }
+}
