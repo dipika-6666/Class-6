@@ -1,3 +1,46 @@
+
+
+// Scroll to Registration Form
+function scrollToForm() {
+    const formSection = document.getElementById('registration');
+    formSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Populate DOB Select Options
+document.addEventListener('DOMContentLoaded', function () {
+    const dobDay = document.getElementById('dobDay');
+    const dobYear = document.getElementById('dobYear');
+
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        dobDay.appendChild(option);
+    }
+
+    const currentYear = new Date().getFullYear();
+    for (let i = currentYear; i >= 1900; i--) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        dobYear.appendChild(option);
+    }
+});
+
+// Registration Form Submission
+function submitForm(event) {
+    event.preventDefault();
+    const successMessage = document.getElementById('success-message');
+    successMessage.classList.remove('hidden');
+}
+
+// Checkout Form Submission
+function submitCheckoutForm(event) {
+    event.preventDefault();
+    const checkoutSuccessMessage = document.getElementById('checkout-success-message');
+    checkoutSuccessMessage.classList.remove('hidden');
+}
+
 // Function to toggle the navigation menu
 function toggleMenu() {
     var menu = document.getElementById("nav-menu");
