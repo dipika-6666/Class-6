@@ -199,3 +199,27 @@ footer {
     color: red;
     display: none;
 }
+
+
+/* Your existing CSS styles here */
+
+#cartIcon {
+    display: none;
+    position: relative;
+}
+
+#cartCount {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.cart-list {
+    display: none;
+    margin-top: 20px;
+}
